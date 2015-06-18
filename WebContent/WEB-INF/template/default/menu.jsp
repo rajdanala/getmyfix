@@ -12,8 +12,12 @@ Menu
 			<a href="${aboutUrl}">About</a>
 		</li>
 		<li>
-			<spring:url value="/logout" var="logoutUrl" htmlEscape="true"/>
-			<a href="<c:url value="j_spring_security_logout" />" > Logout</a>
+			<spring:url value="j_spring_security_logout" var="logoutUrl" htmlEscape="true"/>
+			<%-- <a href="${logoutUrl}" > Logout</a> --%>
+			<form action="${logoutUrl}" method="post">
+			  <input type="submit" value="Log out" />
+			  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+			</form>
 		</li>
 	</ul>
 
