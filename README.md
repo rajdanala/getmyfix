@@ -1,1 +1,1 @@
-Get My Fix is an ondemand service.
+Get My Fix is an ondemand webapp service.
